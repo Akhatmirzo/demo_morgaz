@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>МосГазПроект — Проектирование газификации дома в Москве и области</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= ICON SPRITE (used only inside .hero — rest of the page uses Lucide) ================= -->
+<svg style="display:none">
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.5 20 6v6c0 5-3.4 8.2-8 9.5-4.6-1.3-8-4.5-8-9.5V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5.5l4 2.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.5S4.5 14.8 4.5 9.7a7.5 7.5 0 0 1 15 0c0 5.1-7.5 11.8-7.5 11.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+</svg>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a href="#" class="logo">
+        <span class="logo__icon"><i data-lucide="house" class="icon"></i></span>
+        <span class="logo__text">
+          <span class="logo__title">МОСГАЗПРОЕКТ</span>
+          <span class="logo__sub">Газификация под ключ</span>
+        </span>
+      </a>
+
+      <div class="topbar__contacts">
+        <a href="tel:+74951234567" class="contact-item">
+          <span class="contact-item__icon"><i data-lucide="phone" class="icon"></i></span>
+          <span>
+            <span class="contact-item__main">+7 (495) 123-45-67</span>
+            <span class="contact-item__sub">Ежедневно с 9:00 до 20:00</span>
+          </span>
+        </a>
+        <a href="mailto:info@mosgazproekt.ru" class="contact-item">
+          <span class="contact-item__icon"><i data-lucide="mail" class="icon"></i></span>
+          <span>
+            <span class="contact-item__main">info@mosgazproekt.ru</span>
+            <span class="contact-item__sub">Напишите нам</span>
+          </span>
+        </a>
+      </div>
+
+      <button class="btn btn--orange topbar__cta" data-open-modal>Заказать звонок</button>
+      <button class="burger" id="burgerBtn" aria-label="Меню">
+        <i data-lucide="menu" class="icon"></i>
+      </button>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <ul class="navbar__list">
+        <li class="has-dropdown">
+          <a href="#services">Услуги <i data-lucide="chevron-down" class="icon icon--sm"></i></a>
+          <ul class="dropdown">
+            <li><a href="#services">Проектирование газификации</a></li>
+            <li><a href="#services">Согласование в Мособлгаз</a></li>
+            <li><a href="#equipment">Подбор оборудования</a></li>
+          </ul>
+        </li>
+        <li><a href="#prices">Цены</a></li>
+        <li><a href="#works">Наши работы</a></li>
+        <li><a href="#about">О компании</a></li>
+        <li class="has-dropdown">
+          <a href="#faq">Информация <i data-lucide="chevron-down" class="icon icon--sm"></i></a>
+          <ul class="dropdown">
+            <li><a href="#audit">Статьи</a></li>
+            <li><a href="#faq">Вопросы и ответы</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+      <button class="navbar__search" aria-label="Поиск"><i data-lucide="search" class="icon"></i></button>
+    </div>
+  </nav>
+</header>
+
+<!-- mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu__close" id="mobileMenuClose"><i data-lucide="x" class="icon"></i></button>
+  <ul>
+    <li><a href="#services">Услуги</a></li>
+    <li><a href="#prices">Цены</a></li>
+    <li><a href="#works">Наши работы</a></li>
+    <li><a href="#about">О компании</a></li>
+    <li><a href="#faq">Информация</a></li>
+    <li><a href="#contacts">Контакты</a></li>
+  </ul>
+  <div class="mobile-menu__contacts">
+    <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+    <a href="mailto:info@mosgazproekt.ru">info@mosgazproekt.ru</a>
+  </div>
+</div>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero__bg">
+    <img src="./assets/hero_1.jpg" alt="Загородный дом с газовым подключением">
+  </div>
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <h1>Проектирование<br>газификации дома</h1>
+      <p class="hero__lead">в Москве и Московской области</p>
+      <p class="hero__text">Профессиональные проекты для частных домов. С учётом всех норм, быстрое согласование и безопасное подключение.</p>
+
+      <div class="price-cards">
+        <div class="price-card price-card--blue">
+          <span class="price-card__label">Проект для дома</span>
+          <span class="price-card__value">от 18 000 ₽</span>
+        </div>
+        <div class="price-card price-card--orange">
+          <span class="price-card__label">Полный комплекс</span>
+          <span class="price-card__value">от 190 000 ₽</span>
+        </div>
+      </div>
+
+      <div class="badge-row">
+        <div class="badge-item"><span class="badge-item__icon"><svg class="icon"><use href="#i-shield"/></svg></span><span>Соответствие<br>всем нормам</span></div>
+        <div class="badge-item"><span class="badge-item__icon"><svg class="icon"><use href="#i-clock"/></svg></span><span>Опыт более<br>10 лет</span></div>
+        <div class="badge-item"><span class="badge-item__icon"><svg class="icon"><use href="#i-pin"/></svg></span><span>Работаем в Москве<br>и области</span></div>
+      </div>
+    </div>
+
+    <div class="hero__form-card lead-form-card">
+      <h2>Получите консультацию<br>и расчёт стоимости</h2>
+      <p>Ответим на вопросы и подберём оптимальное решение для вашего дома</p>
+      <form class="lead-form">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" class="phone-mask" name="phone" placeholder="+7 (___) ___-__-__" required>
+        <button type="submit" class="btn btn--orange btn--block">Получить консультацию</button>
+        <label class="checkbox-line"><input type="checkbox" required><span>Согласен(а) на обработку персональных данных</span></label>
+        <label class="checkbox-line"><input type="checkbox" required><span>Ознакомлен(а) с политикой конфиденциальности</span></label>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ЧТО ВХОДИТ ================= -->
+<section class="section" id="services">
+  <div class="container">
+    <h2 class="section__title">Что входит в проектирование газификации</h2>
+    <p class="section__subtitle">Комплекс работ от подготовки до согласования</p>
+
+    <div class="grid-6">
+      <div class="mini-card">
+        <span class="mini-card__icon"><i data-lucide="file-text" class="icon"></i></span>
+        <h3>Планирование</h3>
+        <a href="#" class="link-arrow">Подробнее <i data-lucide="arrow-right" class="icon icon--sm"></i></a>
+      </div>
+      <div class="mini-card">
+        <span class="mini-card__icon"><i data-lucide="file-check-2" class="icon"></i></span>
+        <h3>Получение разрешений</h3>
+        <a href="#" class="link-arrow">Подробнее <i data-lucide="arrow-right" class="icon icon--sm"></i></a>
+      </div>
+      <div class="mini-card">
+        <span class="mini-card__icon"><i data-lucide="file-signature" class="icon"></i></span>
+        <h3>Оформление</h3>
+        <a href="#" class="link-arrow">Подробнее <i data-lucide="arrow-right" class="icon icon--sm"></i></a>
+      </div>
+      <div class="mini-card">
+        <span class="mini-card__icon"><i data-lucide="pencil" class="icon"></i></span>
+        <h3>Внесение изменений</h3>
+        <a href="#" class="link-arrow">Подробнее <i data-lucide="arrow-right" class="icon icon--sm"></i></a>
+      </div>
+      <div class="mini-card">
+        <span class="mini-card__icon"><i data-lucide="calculator" class="icon"></i></span>
+        <h3>Расчёт</h3>
+        <a href="#" class="link-arrow">Подробнее <i data-lucide="arrow-right" class="icon icon--sm"></i></a>
+      </div>
+      <div class="mini-card">
+        <span class="mini-card__icon"><i data-lucide="users" class="icon"></i></span>
+        <h3>Согласование</h3>
+        <a href="#" class="link-arrow">Подробнее <i data-lucide="arrow-right" class="icon icon--sm"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПРОЕКТ НАЧИНАЕТСЯ ================= -->
+<section class="section section--tint">
+  <div class="container split split--reverse">
+    <div class="split__text">
+      <h2 class="section__title">Проект начинается с точного анализа</h2>
+      <p>Грамотное проектирование позволяет избежать ошибок, ускорить согласование и безопасно подобрать оборудование с учётом особенностей вашего дома.</p>
+    </div>
+    <div class="split__media">
+      <img src="./assets/section_2.jpg" alt="Чертёж проекта газификации" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПОЧЕМУ С НАМИ ПРОЩЕ ================= -->
+<section class="section">
+  <div class="container">
+    <h2 class="section__title">Почему с нами проще</h2>
+    <p class="section__subtitle">Больше, чем просто проект — это уверенность на всех этапах</p>
+
+    <div class="grid-4">
+      <div class="feature-card">
+        <span class="feature-card__icon feature-card__icon--orange"><i data-lucide="shield-check" class="icon"></i></span>
+        <h3>5 лет<br>гарантии</h3>
+        <p>На все проектные решения</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-card__icon feature-card__icon--blue"><i data-lucide="users" class="icon"></i></span>
+        <h3>1 подрядчик<br>на все этапы</h3>
+        <p>От проекта до подключения</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-card__icon feature-card__icon--blue"><i data-lucide="file-text" class="icon"></i></span>
+        <h3>Фиксированная<br>цена по договору</h3>
+        <p>Без скрытых и дополнительных платежей</p>
+      </div>
+      <div class="feature-card">
+        <span class="feature-card__icon feature-card__icon--orange"><i data-lucide="clock" class="icon"></i></span>
+        <h3>Соблюдаем<br>сроки работ</h3>
+        <p>Чёткий график и персональная ответственность</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПОЛУЧИТЕ СМЕТУ ================= -->
+<section class="section section--tint">
+  <div class="container split">
+    <div class="split__text">
+      <h2 class="section__title">Получите смету и список документов</h2>
+      <p>Подготовим индивидуальный расчёт и перечень документов для согласования в вашем случае</p>
+      <form class="lead-form lead-form--inline">
+        <div class="lead-form__row">
+          <input type="text" name="name" placeholder="Ваше имя" required>
+          <input type="tel" class="phone-mask" name="phone" placeholder="+7 (___) ___-__-__" required>
+          <button type="submit" class="btn btn--orange">Получить материалы</button>
+        </div>
+        <div class="checkbox-row">
+          <label class="checkbox-line"><input type="checkbox" required><span>Согласен(а) на обработку персональных данных</span></label>
+          <label class="checkbox-line"><input type="checkbox" required><span>Ознакомлен(а) с политикой конфиденциальности</span></label>
+        </div>
+      </form>
+    </div>
+    <div class="split__media">
+      <img src="./assets/section_4_2.jpg" alt="Смета и чек-лист документов" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ================= КАК ПРОХОДИТ ПРОЕКТИРОВАНИЕ ================= -->
+<section class="section" id="works">
+  <div class="container">
+    <h2 class="section__title">Как проходит проектирование</h2>
+    <p class="section__subtitle">Прозрачный процесс с понятными шагами</p>
+
+    <div class="steps">
+      <div class="steps__line"></div>
+      <div class="step">
+        <div class="step__badges"><span class="step__num">1</span><span class="step__icon"><i data-lucide="search" class="icon"></i></span></div>
+        <h3>Сбор данных</h3>
+        <p>Изучаем объект и ваши потребности</p>
+      </div>
+      <div class="step">
+        <div class="step__badges"><span class="step__num">2</span><span class="step__icon"><i data-lucide="file-text" class="icon"></i></span></div>
+        <h3>Подготовка проекта</h3>
+        <p>Разрабатываем проектную документацию</p>
+      </div>
+      <div class="step">
+        <div class="step__badges"><span class="step__num">3</span><span class="step__icon"><i data-lucide="check-circle-2" class="icon"></i></span></div>
+        <h3>Согласование</h3>
+        <p>Подаём документы и сопровождаем процесс</p>
+      </div>
+      <div class="step">
+        <div class="step__badges"><span class="step__num">4</span><span class="step__icon"><i data-lucide="settings" class="icon"></i></span></div>
+        <h3>Подбор оборудования</h3>
+        <p>Рекомендуем оптимальные надёжные решения</p>
+      </div>
+      <div class="step">
+        <div class="step__badges"><span class="step__num">5</span><span class="step__icon"><i data-lucide="folder" class="icon"></i></span></div>
+        <h3>Передача документации</h3>
+        <p>Вы получаете полный готовый комплект</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= СКВОЗНОЙ ТЕХНИЧЕСКИЙ КОНТРОЛЬ ================= -->
+<section class="section section--tint" id="audit">
+  <div class="container">
+    <div class="audit-head">
+      <p class="eyebrow">ЭТАП ПРОВЕРКИ <span class="dot">•</span> ЭКСПЕРТНЫЙ АУДИТ ДОКУМЕНТАЦИИ</p>
+      <div class="pill-row">
+        <span class="pill pill--check">✓ Без очередей в Мособлгаз</span>
+        <span class="pill pill--check">✓ Гарантия сдачи по договору</span>
+        <span class="pill pill--check">✓ Допуск СРО проектировщиков №4829</span>
+      </div>
+    </div>
+
+    <h2 class="section__title">Сквозной технический контроль документации перед экспертизой</h2>
+    <p class="section__lead">Каждый рабочий проект и пакет исполнительных актов проходит предварительную многоступенчатую проверку главным инженером проекта (ГИП). Полностью исключаем любые замечания газораспределительных организаций еще до официальной подачи в архив.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card compare-card--bad">
+        <div class="compare-card__head">
+          <span class="compare-card__icon compare-card__icon--red"><i data-lucide="triangle-alert" class="icon"></i></span>
+          <h3>Почему 8 из 10 самостоятельных проектов получают мотивированный отказ?</h3>
+        </div>
+        <p>Типовой причиной отказа районных газовых трестов выступает формальное несоблюдение норм проектирования: отсутствие актуализированных проектных ссылок на СП 62.13330, непредоставление акта разграничения балансовой принадлежности или превышение лимитов часового расхода без технико-экономического обоснования.</p>
+        <p>При самостоятельной подаче проектные отделы газораспределительных организаций выставляют перечень замечаний, срок устранения которых по регламенту занимает от 30 до 90 рабочих дней. В 65% случаев замечания касаются некорректно рассчитанного гидравлического сопротивления внутренних газопроводов, неверной привязки фасадного шкафа учета газа (ШУУРГ) или отсутствия актов обследования дымоходов и вентиляционных каналов установленной формы (ВДПО).</p>
+        <div class="inset-box">
+          <span class="inset-box__title">СЛЕДСТВИЕ ПРОЕКТНЫХ ОШИБОК:</span>
+          <p>Срыв сроков пуска отопления к зимнему периоду, повторная оплата госпошлин за проведение специализированных экспертиз и риск расторжения действующего договора технологического присоединения со стороны ГРО, удорожанием договора на сотни тысяч рублей из-за завышенного коэффициента одновременности.</p>
+        </div>
+        <div class="compare-card__footer">
+          <span>Статистика отказов ГРО: <b>до 42%</b></span>
+          <span class="pill pill--danger">Риск срыва: от 2 месяцев</span>
+        </div>
+      </div>
+
+      <div class="compare-card compare-card--good">
+        <div class="compare-card__head">
+          <span class="compare-card__icon compare-card__icon--green"><i data-lucide="check-circle-2" class="icon"></i></span>
+          <h3>Регламент предэкспертной проверки «МосГазПроект»: чек-лист из 42 точек</h3>
+        </div>
+        <p>Мы формируем контрольный лист соответствия из 42 обязательных контрольных точек: от проверки охранных расстояний подземного газопровода до фундаментов зданий и смежных коммуникаций (не менее 2.0 м для низкого давления) до наличия расчетных легкосбрасываемых конструкций остекления котельной (0.03 м² на 1 м³ объема помещения).</p>
+        <p>Ведущий инженер нормоконтроля сверяет диаметры труб наружной и внутренней разводки по методикам СП 42-101-2003, контролирует совпадение геодезических отметок цокольного ввода с фактической топосъемкой М 1:500 и визирует спецификацию сертифицированного оборудования. Заказчик получает на 100% согласованный пакет документов без риска затягивания сроков подключения.</p>
+        <div class="inset-box inset-box--blue">
+          <span class="inset-box__title">ОФИЦИАЛЬНАЯ ЮРИДИЧЕСКАЯ ЗАЩИТА:</span>
+          <p>Вся проектная группа состоит в Национальном реестре специалистов (НРС НОПРИЗ). Все замечания надзорных служб устраняются за счет внутреннего фонда компании в течение 24 часов.</p>
+        </div>
+        <div class="compare-card__footer">
+          <span>Результат аудита: <b>100% допуск</b></span>
+          <a href="#" class="link-arrow">Заказать аудит проекта <i data-lucide="arrow-right" class="icon icon--sm"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="audit-bottom">
+      <p>Нормативная база: <b>ГОСТ 21.609-2014</b>, <b>СП 62.13330</b> «Газораспределительные системы», <b>ПП РФ №1547</b></p>
+      <button class="btn btn--orange" data-open-modal>Заказать аудит документации</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= КАЛЬКУЛЯТОР ================= -->
+<section class="section section--tint" id="calc">
+  <div class="container">
+    <h2 class="section__title">Быстрый расчёт расхода газа</h2>
+    <p class="section__subtitle">Узнайте ориентировочные параметры для вашего дома</p>
+
+    <div class="calc-grid">
+      <div class="calc-card">
+        <div class="calc-card__row">
+          <label>Площадь дома, м²
+            <input type="number" id="calcArea" value="200" min="20" max="2000" step="10">
+          </label>
+          <label>Количество этажей
+            <input type="number" id="calcFloors" value="2" min="1" max="5">
+          </label>
+        </div>
+        <div class="calc-card__row">
+          <label>Тип отопления
+            <select id="calcHeating">
+              <option>Газовое</option>
+              <option>Электрическое</option>
+              <option>Твердотопливное</option>
+            </select>
+          </label>
+          <label>Горячая вода
+            <select id="calcWater">
+              <option>Да</option>
+              <option>Нет</option>
+            </select>
+          </label>
+          <label>Тип плиты
+            <select id="calcStove">
+              <option>Газовая</option>
+              <option>Электрическая</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="calc-results">
+        <div class="calc-results__title">Примерные результаты</div>
+        <div class="result-tile">
+          <span class="result-tile__icon"><i data-lucide="droplet" class="icon"></i></span>
+          <div>
+            <div class="result-tile__value">≈ <span id="resVolume">1 200</span> м³/год</div>
+            <div class="result-tile__label">Ориентировочный расход газа</div>
+          </div>
+        </div>
+        <div class="result-tile">
+          <span class="result-tile__icon"><i data-lucide="zap" class="icon"></i></span>
+          <div>
+            <div class="result-tile__value"><span id="resPower">24</span> кВт</div>
+            <div class="result-tile__label">Рекомендуемая мощность котла</div>
+          </div>
+        </div>
+        <button class="btn btn--orange btn--block" id="calcSubmit">Получить точный расчёт</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ОБОРУДОВАНИЕ ================= -->
+<section class="section" id="equipment">
+  <div class="container">
+    <h2 class="section__title">Подберём схему и оборудование под ваш дом</h2>
+    <p class="section__subtitle">Используем надёжное и проверенное оборудование</p>
+
+    <div class="equip-grid">
+      <div class="equip-card">
+        <img src="./assets/equipt1.png" alt="Газовый котёл" loading="lazy">
+        <h3>Газовый котёл <i data-lucide="arrow-right" class="icon icon--sm"></i></h3>
+        <p>Эффективное и безопасное отопление вашего дома</p>
+      </div>
+      <div class="equip-card">
+        <img src="./assets/equipt2.png" alt="Газовый счётчик" loading="lazy">
+        <h3>Газовый счётчик <i data-lucide="arrow-right" class="icon icon--sm"></i></h3>
+        <p>Точный коммерческий учёт расхода газа</p>
+      </div>
+      <div class="equip-card">
+        <img src="./assets/equipt3.png" alt="Шкаф учёта газа" loading="lazy">
+        <h3>Шкаф учёта газа <i data-lucide="arrow-right" class="icon icon--sm"></i></h3>
+        <p>Надёжная уличная защита и простое обслуживание</p>
+      </div>
+      <div class="equip-card">
+        <img src="./assets/equipt4.png" alt="Газопровод и разводка" loading="lazy">
+        <h3>Газопровод и разводка <i data-lucide="arrow-right" class="icon icon--sm"></i></h3>
+        <p>Качественный сертифицированный монтаж по ГОСТ</p>
+      </div>
+
+      <div class="equip-promo">
+        <span class="equip-promo__icon"><i data-lucide="house" class="icon"></i></span>
+        <h3>Подберём оптимальное решение под ваш дом</h3>
+        <p>Учитываем точную площадь, архитектурные особенности строения и ваши потребности. Применяем только проверенное оборудование и безопасные инженерные узлы.</p>
+        <a href="#" class="btn btn--outline">Узнать подробнее</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ЗАЩИТА ОТ ОТКАЗОВ ================= -->
+<section class="section">
+  <div class="container">
+    <p class="eyebrow eyebrow--orange">ПП РФ № 1547 <span class="dot">•</span> Технологическое присоединение без необоснованных отказов</p>
+    <h2 class="section__title">Защита от типичных причин отказа в выдаче ТУ</h2>
+    <p class="section__lead">Более 40% самостоятельных обращений граждан и юридических лиц в газораспределительные организации завершаются мотивированными отказами или навязыванием невыгодных условий подключения. Мы ликвидируем эти риски на этапе предпроектного аудита заявки.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card compare-card--bad">
+        <div class="compare-card__head">
+          <span class="compare-card__icon compare-card__icon--red"><i data-lucide="triangle-alert" class="icon"></i></span>
+          <h3>Типовые барьеры и основания отказов ГРО</h3>
+          <span class="tag">Частая практика</span>
+        </div>
+
+        <div class="mini-inset">
+          <div class="mini-inset__head"><i data-lucide="triangle-alert" class="icon icon--sm icon--red"></i><b>Отказ: «Отсутствие гидравлической пропускной способности сети»</b></div>
+          <p>ГРО заявляет о дефиците давления в распределительном поселковом газопроводе и предлагает ждать реконструкции ГРПШ за счет заявителя, что откладывает газификацию на годы и многократно увеличивает бюджет.</p>
+        </div>
+        <div class="mini-inset">
+          <div class="mini-inset__head"><i data-lucide="triangle-alert" class="icon icon--sm icon--red"></i><b>Отказ: «Ошибки в расчёте максимального часового расхода газа (МЧРГ)»</b></div>
+          <p>Превышение порога в 5 м³/час автоматически переводит объект во 2-ю категорию заявителей со сроками до 2 лет и удорожанием договора на сотни тысяч рублей из-за завышенного коэффициента одновременности.</p>
+        </div>
+        <div class="mini-inset">
+          <div class="mini-inset__head"><i data-lucide="triangle-alert" class="icon icon--sm icon--red"></i><b>Отказ: Конфликт с основным абонентом (частные трубы СНТ / ДНП)</b></div>
+          <p>Требование предоставить нотариальное согласие владельца частной трубы, который запрашивает несоразмерную компенсацию врезки в размере от 300 000 до 1 000 000 ₽.</p>
+        </div>
+
+        <p class="fine-print">* В соответствии с п. 10 Правил подключения (ПП РФ №1547), ГРО не имеет права отказывать при наличии резерва, однако без квалифицированной проверки доказать это заявителю в одиночку практически невозможно.</p>
+      </div>
+
+      <div class="compare-card compare-card--good">
+        <div class="compare-card__head">
+          <span class="compare-card__icon compare-card__icon--green"><i data-lucide="check-circle-2" class="icon"></i></span>
+          <h3>Правовые и инженерные решения «МосГазПроект»</h3>
+          <span class="tag tag--green">100% защита</span>
+        </div>
+
+        <div class="mini-inset mini-inset--blue">
+          <div class="mini-inset__head"><span class="num-bubble">1</span><b>Встречный компьютерный гидрорасчёт сети</b></div>
+          <p>Производим официальный математический расчет пропускной способности существующей поселковой магистрали с моделированием пиковых нагрузок. Доказываем наличие резерва мощности или находим альтернативную нормативную точку врезки без затяжных экспертиз.</p>
+        </div>
+        <div class="mini-inset mini-inset--blue">
+          <div class="mini-inset__head"><span class="num-bubble">2</span><b>Корректировка теплотехнического расчета до 5 м³/час</b></div>
+          <p>Оптимизируем подбор котельного оборудования строго по нормативам СП 41-108-2004, что гарантирует сохранение 1-й категории заявителей. Сокращаем регламентный срок выдачи ТУ до 30 календарных дней и сохраняем фиксированный минимальный тариф.</p>
+        </div>
+        <div class="mini-inset mini-inset--blue">
+          <div class="mini-inset__head"><span class="num-bubble">3</span><b>Юридическое оформление прав врезки (ФАС и Сервитуты)</b></div>
+          <p>В соответствии с изменениями законодательства о социальной газификации, необоснованное препятствование подключению признается нарушением антимонопольного законодательства (ФАС РФ). Заключаем соглашения о компенсациях по прозрачной методике без завышенных запросов.</p>
+        </div>
+
+        <div class="inset-box inset-box--green">
+          <span class="inset-box__title">Официальное сопровождение ведущим инженером:</span>
+          <div class="inset-box__row">
+            <p>Выдача договора техприсоединения в установленные законом 30 дней</p>
+            <span class="pill pill--success">По ПП РФ № 1547</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <div class="container">
+    <h2 class="section__title">Часто задаваемые вопросы</h2>
+
+    <div class="accordion">
+      <div class="accordion__item">
+        <button class="accordion__head">Сколько времени занимает проектирование?<span class="accordion__icon"><i data-lucide="plus" class="icon"></i></span></button>
+        <div class="accordion__body"><p>В среднем разработка проекта газификации частного дома занимает от 10 до 20 рабочих дней в зависимости от сложности объекта и загруженности газораспределительной организации на этапе согласования.</p></div>
+      </div>
+      <div class="accordion__item">
+        <button class="accordion__head">Какие документы нужны для начала работ?<span class="accordion__icon"><i data-lucide="plus" class="icon"></i></span></button>
+        <div class="accordion__body"><p>Понадобятся правоустанавливающие документы на дом и участок, технический паспорт или план БТИ, а также договор о технологическом присоединении (при наличии). Полный список мы уточняем индивидуально после осмотра объекта.</p></div>
+      </div>
+      <div class="accordion__item">
+        <button class="accordion__head">Сколько стоит проект газификации дома?<span class="accordion__icon"><i data-lucide="plus" class="icon"></i></span></button>
+        <div class="accordion__body"><p>Стоимость проекта для дома начинается от 18 000 ₽, а полный комплекс работ «под ключ» — от 190 000 ₽. Итоговая цена зависит от площади дома, удалённости точки подключения и сложности схемы газоснабжения.</p></div>
+      </div>
+      <div class="accordion__item">
+        <button class="accordion__head">Вы помогаете с согласованием в газовой службе?<span class="accordion__icon"><i data-lucide="plus" class="icon"></i></span></button>
+        <div class="accordion__body"><p>Да, мы полностью сопровождаем процесс согласования: готовим и проверяем документацию, подаём её в Мособлгаз, отслеживаем статус и устраняем замечания без вашего участия — от заявки до получения готового пакета.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= CTA ================= -->
+<section class="cta" id="contacts">
+  <div class="cta__bg">
+    <img src="./assets/cta.png" alt="Загородный дом вечером">
+  </div>
+  <div class="container cta__inner">
+    <h2>Оставьте заявку — подготовим проект<br>и сориентируем по стоимости</h2>
+    <p>Бесплатная консультация инженера и индивидуальный расчёт сметы</p>
+    <form class="lead-form lead-form--inline">
+      <div class="lead-form__row lead-form__row--4">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" class="phone-mask" name="phone" placeholder="+7 (___) ___-__-__" required>
+        <input type="email" name="email" placeholder="E-mail">
+        <button type="submit" class="btn btn--orange">Оставить заявку</button>
+      </div>
+      <div class="checkbox-row">
+        <label class="checkbox-line checkbox-line--light"><input type="checkbox" required><span>Согласен(а) на обработку персональных данных</span></label>
+        <label class="checkbox-line checkbox-line--light"><input type="checkbox" required><span>Ознакомлен(а) с политикой конфиденциальности</span></label>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__col footer__col--brand">
+      <a href="#" class="logo logo--light">
+        <span class="logo__icon"><i data-lucide="house" class="icon"></i></span>
+        <span class="logo__text">
+          <span class="logo__title">МОСГАЗПРОЕКТ</span>
+          <span class="logo__sub">Газификация под ключ</span>
+        </span>
+      </a>
+      <p class="footer__copy">© 2026 ООО «МосГазПроект»<br>Все права защищены</p>
+    </div>
+    <div class="footer__col">
+      <a href="#services">Услуги</a>
+      <a href="#prices">Цены</a>
+      <a href="#works">Наши работы</a>
+      <a href="#about">О компании</a>
+    </div>
+    <div class="footer__col">
+      <a href="#audit">Информация</a>
+      <a href="#">Статьи</a>
+      <a href="#faq">Вопросы и ответы</a>
+      <a href="#">Политика конфиденциальности</a>
+    </div>
+    <div class="footer__col footer__col--contacts">
+      <span><i data-lucide="map-pin" class="icon icon--sm"></i> г. Москва, ул. Примерная, д. 10, оф</span>
+      <span><i data-lucide="phone" class="icon icon--sm"></i> +7 (495) 123-45-67</span>
+      <span><i data-lucide="mail" class="icon icon--sm"></i> info@mosgazproekt.ru</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="modal">
+  <div class="modal__overlay" data-close-modal></div>
+  <div class="modal__card">
+    <button class="modal__close" data-close-modal><i data-lucide="x" class="icon"></i></button>
+    <h3>Заказать звонок</h3>
+    <p>Оставьте номер, и наш специалист свяжется с вами в течение 15 минут</p>
+    <form class="lead-form">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="tel" class="phone-mask" name="phone" placeholder="+7 (___) ___-__-__" required>
+      <button type="submit" class="btn btn--orange btn--block">Жду звонка</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
