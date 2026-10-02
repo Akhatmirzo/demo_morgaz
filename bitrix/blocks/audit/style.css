@@ -1,0 +1,61 @@
+.eg-scope .eg-section--audit {
+  background: linear-gradient(to bottom, #eaf4fe 0%, #f1f7fe 50%, #e6f1fc 100%);
+}
+.eg-scope .eg-audit-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.eg-scope .eg-pill-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.eg-scope .eg-pill--check {
+  color: var(--eg-green);
+}
+.eg-scope .eg-pill--danger {
+  background: var(--eg-red-bg);
+  color: var(--eg-red);
+  border-color: transparent;
+}
+.eg-scope .eg-inset-box--blue {
+  background: var(--eg-blue-light);
+}
+.eg-scope .eg-compare-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border-top: 1px solid var(--eg-border);
+  padding-top: 18px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.eg-scope .eg-audit-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid var(--eg-border);
+  margin-top: 36px;
+  padding-top: 28px;
+  flex-wrap: wrap;
+}
+.eg-scope .eg-audit-bottom p {
+  font-size: 14.5px;
+  color: var(--eg-text-muted);
+}
+@media (max-width: 640px) {
+  .eg-scope .eg-audit-bottom,
+  .eg-scope .eg-compare-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .eg-scope .eg-audit-bottom .eg-btn {
+    width: 100%;
+  }
+}

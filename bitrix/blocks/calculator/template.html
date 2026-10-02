@@ -1,0 +1,61 @@
+<div class="eg-scope">
+<section class="eg-section eg-section--tint eg-section--calc" id="eg-calc">
+  <div class="eg-container">
+    <h2 class="eg-section__title">Быстрый расчёт расхода газа</h2>
+    <p class="eg-section__subtitle">Узнайте ориентировочные параметры для вашего дома</p>
+
+    <div class="eg-calc-grid">
+      <div class="eg-calc-card">
+        <div class="eg-calc-card__row">
+          <label>Площадь дома, м²
+            <input type="number" id="eg-calc-area" value="200" min="20" max="2000" step="10">
+          </label>
+          <label>Количество этажей
+            <input type="number" id="eg-calc-floors" value="2" min="1" max="5">
+          </label>
+        </div>
+        <div class="eg-calc-card__row">
+          <label>Тип отопления
+            <select id="eg-calc-heating">
+              <option>Газовое</option>
+              <option>Электрическое</option>
+              <option>Твердотопливное</option>
+            </select>
+          </label>
+          <label>Горячая вода
+            <select id="eg-calc-water">
+              <option>Да</option>
+              <option>Нет</option>
+            </select>
+          </label>
+          <label>Тип плиты
+            <select id="eg-calc-stove">
+              <option>Газовая</option>
+              <option>Электрическая</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="eg-calc-results">
+        <div class="eg-calc-results__title">Примерные результаты</div>
+        <div class="eg-result-tile">
+          <span class="eg-result-tile__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z" /></svg></span>
+          <div>
+            <div class="eg-result-tile__value">≈ <span id="eg-res-volume">1 200</span> м³/год</div>
+            <div class="eg-result-tile__label">Ориентировочный расход газа</div>
+          </div>
+        </div>
+        <div class="eg-result-tile">
+          <span class="eg-result-tile__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></svg></span>
+          <div>
+            <div class="eg-result-tile__value"><span id="eg-res-power">24</span> кВт</div>
+            <div class="eg-result-tile__label">Рекомендуемая мощность котла</div>
+          </div>
+        </div>
+        <button class="eg-btn eg-btn--orange eg-btn--block" type="button" data-eg-open-modal>Получить точный расчёт</button>
+      </div>
+    </div>
+  </div>
+</section>
+</div>

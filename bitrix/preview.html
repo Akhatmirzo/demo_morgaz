@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Проектирование газификации дома — НИП Энергогаз</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common/eg-base.css">
+<link rel="stylesheet" href="blocks/header/style.css">
+<link rel="stylesheet" href="blocks/hero/style.css">
+<link rel="stylesheet" href="blocks/services/style.css">
+<link rel="stylesheet" href="blocks/analysis/style.css">
+<link rel="stylesheet" href="blocks/advantages/style.css">
+<link rel="stylesheet" href="blocks/steps/style.css">
+<link rel="stylesheet" href="blocks/audit/style.css">
+<link rel="stylesheet" href="blocks/calculator/style.css">
+<link rel="stylesheet" href="blocks/equipment/style.css">
+<link rel="stylesheet" href="blocks/refusals/style.css">
+<link rel="stylesheet" href="blocks/faq/style.css">
+<link rel="stylesheet" href="blocks/cta/style.css">
+<link rel="stylesheet" href="blocks/footer/style.css">
+<link rel="stylesheet" href="blocks/modal/style.css">
+<style>body { margin: 0; background: #fff; }</style>
+</head>
+<body>
+<div class="eg-scope">
+<header class="eg-site-header">
+  <div class="eg-topbar">
+    <div class="eg-container eg-topbar__inner">
+      <a href="#" class="eg-logo">
+        <span class="eg-logo__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></span>
+        <span class="eg-logo__text">
+          <span class="eg-logo__title">НИП Энергогаз</span>
+          <span class="eg-logo__sub">Газификация под ключ</span>
+        </span>
+      </a>
+
+      <div class="eg-topbar__contacts">
+        <a href="tel:+74951234567" class="eg-contact-item">
+          <span class="eg-contact-item__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg></span>
+          <span>
+            <span class="eg-contact-item__main">+7 (495) 123-45-67</span>
+            <span class="eg-contact-item__sub">Ежедневно с 9:00 до 20:00</span>
+          </span>
+        </a>
+        <a href="mailto:info@mosgazproekt.ru" class="eg-contact-item">
+          <span class="eg-contact-item__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg></span>
+          <span>
+            <span class="eg-contact-item__main">info@mosgazproekt.ru</span>
+            <span class="eg-contact-item__sub">Напишите нам</span>
+          </span>
+        </a>
+      </div>
+
+      <button class="eg-btn eg-btn--orange eg-topbar__cta" data-eg-open-modal>Заказать звонок</button>
+      <button class="eg-burger" id="eg-burger-btn" aria-label="Меню">
+        <svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12" /><line x1="4" x2="20" y1="6" y2="6" /><line x1="4" x2="20" y1="18" y2="18" /></svg>
+      </button>
+    </div>
+  </div>
+
+  <nav class="eg-navbar" id="eg-navbar">
+    <div class="eg-container eg-navbar__inner">
+      <ul class="eg-navbar__list">
+        <li class="eg-has-dropdown">
+          <a href="#">Услуги <svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></a>
+          <ul class="eg-dropdown">
+            <li class="eg-has-sub">
+              <a href="#" class="eg-is-active">Проектирование <svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg></a>
+              <ul class="eg-dropdown eg-dropdown--sub">
+                <li><a href="#">Планирование</a></li>
+                <li><a href="#">Получение разрешений</a></li>
+                <li><a href="#">Оформление</a></li>
+                <li><a href="#">Внесение изменений</a></li>
+                <li><a href="#">Расчёт</a></li>
+                <li><a href="#">Согласование</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Монтаж</a></li>
+            <li><a href="#">Обслуживание</a></li>
+          </ul>
+        </li>
+        <li><a href="#eg-prices">Цены</a></li>
+        <li><a href="#eg-works">Наши работы</a></li>
+        <li><a href="#eg-about">О компании</a></li>
+        <li class="eg-has-dropdown">
+          <a href="#eg-faq">Информация <svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></a>
+          <ul class="eg-dropdown">
+            <li><a href="#eg-audit">Статьи</a></li>
+            <li><a href="#eg-faq">Вопросы и ответы</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </li>
+        <li><a href="#eg-contacts">Контакты</a></li>
+      </ul>
+      <button class="eg-navbar__search" aria-label="Поиск"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg></button>
+    </div>
+  </nav>
+</header>
+
+<div class="eg-mobile-menu" id="eg-mobile-menu">
+  <button class="eg-mobile-menu__close" id="eg-mobile-menu-close"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button>
+  <ul>
+    <li class="eg-mobile-menu__parent">
+      <div class="eg-mobile-menu__row">
+        <a href="#">Услуги</a>
+        <button class="eg-mobile-menu__toggle" type="button" aria-expanded="false" aria-label="Подменю «Услуги»"><svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+      </div>
+      <ul class="eg-mobile-menu__sub">
+        <li class="eg-mobile-menu__parent">
+          <div class="eg-mobile-menu__row">
+            <a href="#" class="eg-is-active">Проектирование</a>
+            <button class="eg-mobile-menu__toggle" type="button" aria-expanded="false" aria-label="Подменю «Проектирование»"><svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></button>
+          </div>
+          <ul class="eg-mobile-menu__sub">
+            <li><a href="#">Планирование</a></li>
+            <li><a href="#">Получение разрешений</a></li>
+            <li><a href="#">Оформление</a></li>
+            <li><a href="#">Внесение изменений</a></li>
+            <li><a href="#">Расчёт</a></li>
+            <li><a href="#">Согласование</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Монтаж</a></li>
+        <li><a href="#">Обслуживание</a></li>
+      </ul>
+    </li>
+    <li><a href="#eg-prices">Цены</a></li>
+    <li><a href="#eg-works">Наши работы</a></li>
+    <li><a href="#eg-about">О компании</a></li>
+    <li><a href="#eg-faq">Информация</a></li>
+    <li><a href="#eg-contacts">Контакты</a></li>
+  </ul>
+  <div class="eg-mobile-menu__contacts">
+    <a href="tel:+74951234567">+7 (495) 123-45-67</a>
+    <a href="mailto:info@mosgazproekt.ru">info@mosgazproekt.ru</a>
+  </div>
+</div>
+</div>
+
+<div class="eg-scope">
+<section class="eg-hero">
+  <div class="eg-hero__bg">
+    <img src="img/hero.webp" alt="Загородный дом с газовым подключением">
+  </div>
+  <div class="eg-container eg-hero__inner">
+    <div class="eg-hero__content">
+      <h1>Проектирование<br>газификации дома</h1>
+      <p class="eg-hero__lead">в Москве и Московской области</p>
+      <p class="eg-hero__text">Профессиональные проекты для частных домов. С учётом всех норм, быстрое согласование и безопасное подключение.</p>
+
+      <div class="eg-price-cards">
+        <div class="eg-price-card eg-price-card--blue">
+          <span class="eg-price-card__label">Проект для дома</span>
+          <span class="eg-price-card__value">от 18 000 ₽</span>
+        </div>
+        <div class="eg-price-card eg-price-card--orange">
+          <span class="eg-price-card__label">Полный комплекс</span>
+          <span class="eg-price-card__value">от 190 000 ₽</span>
+        </div>
+      </div>
+
+      <div class="eg-badge-row">
+        <div class="eg-badge-item"><span class="eg-badge-item__icon"><svg class="eg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 20 6v6c0 5-3.4 8.2-8 9.5-4.6-1.3-8-4.5-8-9.5V6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.5 12.2l2.3 2.3 4.7-4.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Соответствие<br>всем нормам</span></div>
+        <div class="eg-badge-item"><span class="eg-badge-item__icon"><svg class="eg-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5.5l4 2.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Опыт более<br>10 лет</span></div>
+        <div class="eg-badge-item"><span class="eg-badge-item__icon"><svg class="eg-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.5S4.5 14.8 4.5 9.7a7.5 7.5 0 0 1 15 0c0 5.1-7.5 11.8-7.5 11.8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><span>Работаем в Москве<br>и области</span></div>
+      </div>
+    </div>
+
+    <div class="eg-hero__form-card eg-lead-form-card">
+      <h2>Получите консультацию<br>и расчёт стоимости</h2>
+      <p>Ответим на вопросы и подберём оптимальное решение для вашего дома</p>
+      <form method="post" action="" data-eg-form="hero" class="eg-lead-form">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" class="eg-phone-mask" name="phone" placeholder="+7 (___) ___-__-__" required>
+        <button type="submit" class="eg-btn eg-btn--orange eg-btn--block">Получить консультацию</button>
+        <label class="eg-checkbox-line"><input type="checkbox" name="agree_personal_data" value="Y" required><span>Согласен(а) на обработку персональных данных</span></label>
+        <label class="eg-checkbox-line"><input type="checkbox" name="agree_policy" value="Y" required><span>Ознакомлен(а) с политикой конфиденциальности</span></label>
+      </form>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="eg-scope">
+<section class="eg-section" id="eg-services">
+  <div class="eg-container">
+    <h2 class="eg-section__title">Что входит в проектирование газификации</h2>
+    <p class="eg-section__subtitle">Комплекс работ от подготовки до согласования</p>
+
+    <div class="eg-grid-6">
+      <div class="eg-mini-card">
+        <span class="eg-mini-card__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M10 9H8" /><path d="M16 13H8" /><path d="M16 17H8" /></svg></span>
+        <h3>Планирование</h3>
+        <a href="#" class="eg-link-arrow">Подробнее <svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+      </div>
+      <div class="eg-mini-card">
+        <span class="eg-mini-card__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="m3 15 2 2 4-4" /></svg></span>
+        <h3>Получение разрешений</h3>
+        <a href="#" class="eg-link-arrow">Подробнее <svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+      </div>
+      <div class="eg-mini-card">
+        <span class="eg-mini-card__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 5-2.414-2.414A2 2 0 0 0 14.172 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2" /><path d="M21.378 12.626a1 1 0 0 0-3.004-3.004l-4.01 4.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /><path d="M8 18h1" /></svg></span>
+        <h3>Оформление</h3>
+        <a href="#" class="eg-link-arrow">Подробнее <svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+      </div>
+      <div class="eg-mini-card">
+        <span class="eg-mini-card__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" /><path d="m15 5 4 4" /></svg></span>
+        <h3>Внесение изменений</h3>
+        <a href="#" class="eg-link-arrow">Подробнее <svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+      </div>
+      <div class="eg-mini-card">
+        <span class="eg-mini-card__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2" /><line x1="8" x2="16" y1="6" y2="6" /><line x1="16" x2="16" y1="14" y2="18" /><path d="M16 10h.01" /><path d="M12 10h.01" /><path d="M8 10h.01" /><path d="M12 14h.01" /><path d="M8 14h.01" /><path d="M12 18h.01" /><path d="M8 18h.01" /></svg></span>
+        <h3>Расчёт</h3>
+        <a href="#" class="eg-link-arrow">Подробнее <svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+      </div>
+      <div class="eg-mini-card">
+        <span class="eg-mini-card__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></span>
+        <h3>Согласование</h3>
+        <a href="#" class="eg-link-arrow">Подробнее <svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="eg-scope">
+<section class="eg-section eg-section--tint">
+  <div class="eg-container eg-split eg-split--reverse">
+    <div class="eg-split__text">
+      <h2 class="eg-section__title">Проект начинается с точного анализа</h2>
+      <p>Грамотное проектирование позволяет избежать ошибок, ускорить согласование и безопасно подобрать оборудование с учётом особенностей вашего дома.</p>
+    </div>
+    <div class="eg-split__media">
+      <img src="img/analysis.webp" alt="Чертёж проекта газификации" loading="lazy">
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="eg-scope">
+<section class="eg-section">
+  <div class="eg-container">
+    <h2 class="eg-section__title">Почему с нами проще</h2>
+    <p class="eg-section__subtitle">Больше, чем просто проект — это уверенность на всех этапах</p>
+
+    <div class="eg-grid-4">
+      <div class="eg-feature-card">
+        <span class="eg-feature-card__icon eg-feature-card__icon--orange"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /><path d="m9 12 2 2 4-4" /></svg></span>
+        <h3>5 лет<br>гарантии</h3>
+        <p>На все проектные решения</p>
+      </div>
+      <div class="eg-feature-card">
+        <span class="eg-feature-card__icon eg-feature-card__icon--blue"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></span>
+        <h3>1 подрядчик<br>на все этапы</h3>
+        <p>От проекта до подключения</p>
+      </div>
+      <div class="eg-feature-card">
+        <span class="eg-feature-card__icon eg-feature-card__icon--blue"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M10 9H8" /><path d="M16 13H8" /><path d="M16 17H8" /></svg></span>
+        <h3>Фиксированная<br>цена по договору</h3>
+        <p>Без скрытых и дополнительных платежей</p>
+      </div>
+      <div class="eg-feature-card">
+        <span class="eg-feature-card__icon eg-feature-card__icon--orange"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg></span>
+        <h3>Соблюдаем<br>сроки работ</h3>
+        <p>Чёткий график и персональная ответственность</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="eg-scope">
+<section class="eg-section eg-section--tint">
+  <div class="eg-container eg-split">
+    <div class="eg-split__text">
+      <h2 class="eg-section__title">Получите смету и список документов</h2>
+      <p>Подготовим индивидуальный расчёт и перечень документов для согласования в вашем случае</p>
+      <form method="post" action="" data-eg-form="estimate" class="eg-lead-form eg-lead-form--inline">
+        <div class="eg-lead-form__row">
+          <input type="text" name="name" placeholder="Ваше имя" required>
+          <input type="tel" class="eg-phone-mask" name="phone" placeholder="+7 (___) ___-__-__" required>
+          <button type="submit" class="eg-btn eg-btn--orange">Получить материалы</button>
+        </div>
+        <div class="eg-checkbox-row">
+          <label class="eg-checkbox-line"><input type="checkbox" name="agree_personal_data" value="Y" required><span>Согласен(а) на обработку персональных данных</span></label>
+          <label class="eg-checkbox-line"><input type="checkbox" name="agree_policy" value="Y" required><span>Ознакомлен(а) с политикой конфиденциальности</span></label>
+        </div>
+      </form>
+    </div>
+    <div class="eg-split__media">
+      <img src="img/estimate.webp" alt="Смета и чек-лист документов" loading="lazy">
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="eg-scope">
+<section class="eg-section" id="eg-works">
+  <div class="eg-container">
+    <h2 class="eg-section__title">Как проходит проектирование</h2>
+    <p class="eg-section__subtitle">Прозрачный процесс с понятными шагами</p>
+
+    <div class="eg-steps">
+      <div class="eg-steps__line"></div>
+      <div class="eg-step">
+        <div class="eg-step__badges"><span class="eg-step__num">1</span><span class="eg-step__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg></span></div>
+        <h3>Сбор данных</h3>
+        <p>Изучаем объект и ваши потребности</p>
+      </div>
+      <div class="eg-step">
+        <div class="eg-step__badges"><span class="eg-step__num">2</span><span class="eg-step__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" /><path d="M14 2v4a2 2 0 0 0 2 2h4" /><path d="M10 9H8" /><path d="M16 13H8" /><path d="M16 17H8" /></svg></span></div>
+        <h3>Подготовка проекта</h3>
+        <p>Разрабатываем проектную документацию</p>
+      </div>
+      <div class="eg-step">
+        <div class="eg-step__badges"><span class="eg-step__num">3</span><span class="eg-step__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg></span></div>
+        <h3>Согласование</h3>
+        <p>Подаём документы и сопровождаем процесс</p>
+      </div>
+      <div class="eg-step">
+        <div class="eg-step__badges"><span class="eg-step__num">4</span><span class="eg-step__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" /><circle cx="12" cy="12" r="3" /></svg></span></div>
+        <h3>Подбор оборудования</h3>
+        <p>Рекомендуем оптимальные надёжные решения</p>
+      </div>
+      <div class="eg-step">
+        <div class="eg-step__badges"><span class="eg-step__num">5</span><span class="eg-step__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z" /></svg></span></div>
+        <h3>Передача документации</h3>
+        <p>Вы получаете полный готовый комплект</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="eg-scope">
+<section class="eg-section eg-section--tint eg-section--audit" id="eg-audit">
+  <div class="eg-container">
+    <div class="eg-audit-head">
+      <p class="eg-eyebrow">ЭТАП ПРОВЕРКИ <span class="eg-dot">•</span> ЭКСПЕРТНЫЙ АУДИТ ДОКУМЕНТАЦИИ</p>
+      <div class="eg-pill-row">
+        <span class="eg-pill eg-pill--check">✓ Без очередей в Мособлгаз</span>
+        <span class="eg-pill eg-pill--check">✓ Гарантия сдачи по договору</span>
+        <span class="eg-pill eg-pill--check">✓ Допуск СРО проектировщиков №4829</span>
+      </div>
+    </div>
+
+    <h2 class="eg-section__title">Сквозной технический контроль документации перед экспертизой</h2>
+    <p class="eg-section__lead">Каждый рабочий проект и пакет исполнительных актов проходит предварительную многоступенчатую проверку главным инженером проекта (ГИП). Полностью исключаем любые замечания газораспределительных организаций еще до официальной подачи в архив.</p>
+
+    <div class="eg-compare-grid">
+      <div class="eg-compare-card eg-compare-card--bad">
+        <div class="eg-compare-card__head">
+          <span class="eg-compare-card__icon eg-compare-card__icon--red"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></svg></span>
+          <h3>Почему 8 из 10 самостоятельных проектов получают мотивированный отказ?</h3>
+        </div>
+        <p>Типовой причиной отказа районных газовых трестов выступает формальное несоблюдение норм проектирования: отсутствие актуализированных проектных ссылок на СП 62.13330, непредоставление акта разграничения балансовой принадлежности или превышение лимитов часового расхода без технико-экономического обоснования.</p>
+        <p>При самостоятельной подаче проектные отделы газораспределительных организаций выставляют перечень замечаний, срок устранения которых по регламенту занимает от 30 до 90 рабочих дней. В 65% случаев замечания касаются некорректно рассчитанного гидравлического сопротивления внутренних газопроводов, неверной привязки фасадного шкафа учета газа (ШУУРГ) или отсутствия актов обследования дымоходов и вентиляционных каналов установленной формы (ВДПО).</p>
+        <div class="eg-inset-box">
+          <span class="eg-inset-box__title">СЛЕДСТВИЕ ПРОЕКТНЫХ ОШИБОК:</span>
+          <p>Срыв сроков пуска отопления к зимнему периоду, повторная оплата госпошлин за проведение специализированных экспертиз и риск расторжения действующего договора технологического присоединения со стороны ГРО, удорожанием договора на сотни тысяч рублей из-за завышенного коэффициента одновременности.</p>
+        </div>
+        <div class="eg-compare-card__footer">
+          <span>Статистика отказов ГРО: <b>до 42%</b></span>
+          <span class="eg-pill eg-pill--danger">Риск срыва: от 2 месяцев</span>
+        </div>
+      </div>
+
+      <div class="eg-compare-card eg-compare-card--good">
+        <div class="eg-compare-card__head">
+          <span class="eg-compare-card__icon eg-compare-card__icon--green"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg></span>
+          <h3>Регламент предэкспертной проверки «НИП Энергогаз»: чек-лист из 42 точек</h3>
+        </div>
+        <p>Мы формируем контрольный лист соответствия из 42 обязательных контрольных точек: от проверки охранных расстояний подземного газопровода до фундаментов зданий и смежных коммуникаций (не менее 2.0 м для низкого давления) до наличия расчетных легкосбрасываемых конструкций остекления котельной (0.03 м² на 1 м³ объема помещения).</p>
+        <p>Ведущий инженер нормоконтроля сверяет диаметры труб наружной и внутренней разводки по методикам СП 42-101-2003, контролирует совпадение геодезических отметок цокольного ввода с фактической топосъемкой М 1:500 и визирует спецификацию сертифицированного оборудования. Заказчик получает на 100% согласованный пакет документов без риска затягивания сроков подключения.</p>
+        <div class="eg-inset-box eg-inset-box--blue">
+          <span class="eg-inset-box__title">ОФИЦИАЛЬНАЯ ЮРИДИЧЕСКАЯ ЗАЩИТА:</span>
+          <p>Вся проектная группа состоит в Национальном реестре специалистов (НРС НОПРИЗ). Все замечания надзорных служб устраняются за счет внутреннего фонда компании в течение 24 часов.</p>
+        </div>
+        <div class="eg-compare-card__footer">
+          <span>Результат аудита: <b>100% допуск</b></span>
+          <a href="#" class="eg-link-arrow">Заказать аудит проекта <svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="eg-audit-bottom">
+      <p>Нормативная база: <b>ГОСТ 21.609-2014</b>, <b>СП 62.13330</b> «Газораспределительные системы», <b>ПП РФ №1547</b></p>
+      <button class="eg-btn eg-btn--orange" data-eg-open-modal>Заказать аудит документации</button>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="eg-scope">
+<section class="eg-section eg-section--tint eg-section--calc" id="eg-calc">
+  <div class="eg-container">
+    <h2 class="eg-section__title">Быстрый расчёт расхода газа</h2>
+    <p class="eg-section__subtitle">Узнайте ориентировочные параметры для вашего дома</p>
+
+    <div class="eg-calc-grid">
+      <div class="eg-calc-card">
+        <div class="eg-calc-card__row">
+          <label>Площадь дома, м²
+            <input type="number" id="eg-calc-area" value="200" min="20" max="2000" step="10">
+          </label>
+          <label>Количество этажей
+            <input type="number" id="eg-calc-floors" value="2" min="1" max="5">
+          </label>
+        </div>
+        <div class="eg-calc-card__row">
+          <label>Тип отопления
+            <select id="eg-calc-heating">
+              <option>Газовое</option>
+              <option>Электрическое</option>
+              <option>Твердотопливное</option>
+            </select>
+          </label>
+          <label>Горячая вода
+            <select id="eg-calc-water">
+              <option>Да</option>
+              <option>Нет</option>
+            </select>
+          </label>
+          <label>Тип плиты
+            <select id="eg-calc-stove">
+              <option>Газовая</option>
+              <option>Электрическая</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <div class="eg-calc-results">
+        <div class="eg-calc-results__title">Примерные результаты</div>
+        <div class="eg-result-tile">
+          <span class="eg-result-tile__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z" /></svg></span>
+          <div>
+            <div class="eg-result-tile__value">≈ <span id="eg-res-volume">1 200</span> м³/год</div>
+            <div class="eg-result-tile__label">Ориентировочный расход газа</div>
+          </div>
+        </div>
+        <div class="eg-result-tile">
+          <span class="eg-result-tile__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" /></svg></span>
+          <div>
+            <div class="eg-result-tile__value"><span id="eg-res-power">24</span> кВт</div>
+            <div class="eg-result-tile__label">Рекомендуемая мощность котла</div>
+          </div>
+        </div>
+        <button class="eg-btn eg-btn--orange eg-btn--block" type="button" data-eg-open-modal>Получить точный расчёт</button>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="eg-scope">
+<section class="eg-section" id="eg-equipment">
+  <div class="eg-container">
+    <h2 class="eg-section__title">Подберём схему и оборудование под ваш дом</h2>
+    <p class="eg-section__subtitle">Используем надёжное и проверенное оборудование</p>
+
+    <div class="eg-equip-grid">
+      <div class="eg-equip-card">
+        <img src="img/equip-1.webp" alt="Газовый котёл" loading="lazy">
+        <h3>Газовый котёл <svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></h3>
+        <p>Эффективное и безопасное отопление вашего дома</p>
+      </div>
+      <div class="eg-equip-card">
+        <img src="img/equip-2.webp" alt="Газовый счётчик" loading="lazy">
+        <h3>Газовый счётчик <svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></h3>
+        <p>Точный коммерческий учёт расхода газа</p>
+      </div>
+      <div class="eg-equip-card">
+        <img src="img/equip-3.webp" alt="Шкаф учёта газа" loading="lazy">
+        <h3>Шкаф учёта газа <svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></h3>
+        <p>Надёжная уличная защита и простое обслуживание</p>
+      </div>
+      <div class="eg-equip-card">
+        <img src="img/equip-4.webp" alt="Газопровод и разводка" loading="lazy">
+        <h3>Газопровод и разводка <svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg></h3>
+        <p>Качественный сертифицированный монтаж по ГОСТ</p>
+      </div>
+
+      <div class="eg-equip-promo">
+        <span class="eg-equip-promo__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></span>
+        <h3>Подберём оптимальное решение под ваш дом</h3>
+        <p>Учитываем точную площадь, архитектурные особенности строения и ваши потребности. Применяем только проверенное оборудование и безопасные инженерные узлы.</p>
+        <a href="#" class="eg-btn eg-btn--outline">Узнать подробнее</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="eg-scope">
+<section class="eg-section">
+  <div class="eg-container">
+    <p class="eg-eyebrow eg-eyebrow--orange">ПП РФ № 1547 <span class="eg-dot">•</span> Технологическое присоединение без необоснованных отказов</p>
+    <h2 class="eg-section__title">Защита от типичных причин отказа в выдаче ТУ</h2>
+    <p class="eg-section__lead">Более 40% самостоятельных обращений граждан и юридических лиц в газораспределительные организации завершаются мотивированными отказами или навязыванием невыгодных условий подключения. Мы ликвидируем эти риски на этапе предпроектного аудита заявки.</p>
+
+    <div class="eg-compare-grid">
+      <div class="eg-compare-card eg-compare-card--bad">
+        <div class="eg-compare-card__head">
+          <span class="eg-compare-card__icon eg-compare-card__icon--red"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></svg></span>
+          <h3>Типовые барьеры и основания отказов ГРО</h3>
+          <span class="eg-tag">Частая практика</span>
+        </div>
+
+        <div class="eg-mini-inset">
+          <div class="eg-mini-inset__head"><svg class="eg-icon eg-icon--sm eg-icon--red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></svg><b>Отказ: «Отсутствие гидравлической пропускной способности сети»</b></div>
+          <p>ГРО заявляет о дефиците давления в распределительном поселковом газопроводе и предлагает ждать реконструкции ГРПШ за счет заявителя, что откладывает газификацию на годы и многократно увеличивает бюджет.</p>
+        </div>
+        <div class="eg-mini-inset">
+          <div class="eg-mini-inset__head"><svg class="eg-icon eg-icon--sm eg-icon--red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></svg><b>Отказ: «Ошибки в расчёте максимального часового расхода газа (МЧРГ)»</b></div>
+          <p>Превышение порога в 5 м³/час автоматически переводит объект во 2-ю категорию заявителей со сроками до 2 лет и удорожанием договора на сотни тысяч рублей из-за завышенного коэффициента одновременности.</p>
+        </div>
+        <div class="eg-mini-inset">
+          <div class="eg-mini-inset__head"><svg class="eg-icon eg-icon--sm eg-icon--red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /><path d="M12 9v4" /><path d="M12 17h.01" /></svg><b>Отказ: Конфликт с основным абонентом (частные трубы СНТ / ДНП)</b></div>
+          <p>Требование предоставить нотариальное согласие владельца частной трубы, который запрашивает несоразмерную компенсацию врезки в размере от 300 000 до 1 000 000 ₽.</p>
+        </div>
+
+        <p class="eg-fine-print">* В соответствии с п. 10 Правил подключения (ПП РФ №1547), ГРО не имеет права отказывать при наличии резерва, однако без квалифицированной проверки доказать это заявителю в одиночку практически невозможно.</p>
+      </div>
+
+      <div class="eg-compare-card eg-compare-card--good">
+        <div class="eg-compare-card__head">
+          <span class="eg-compare-card__icon eg-compare-card__icon--green"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="m9 12 2 2 4-4" /></svg></span>
+          <h3>Правовые и инженерные решения «НИП Энергогаз»</h3>
+          <span class="eg-tag eg-tag--green">100% защита</span>
+        </div>
+
+        <div class="eg-mini-inset eg-mini-inset--blue">
+          <div class="eg-mini-inset__head"><span class="eg-num-bubble">1</span><b>Встречный компьютерный гидрорасчёт сети</b></div>
+          <p>Производим официальный математический расчет пропускной способности существующей поселковой магистрали с моделированием пиковых нагрузок. Доказываем наличие резерва мощности или находим альтернативную нормативную точку врезки без затяжных экспертиз.</p>
+        </div>
+        <div class="eg-mini-inset eg-mini-inset--blue">
+          <div class="eg-mini-inset__head"><span class="eg-num-bubble">2</span><b>Корректировка теплотехнического расчета до 5 м³/час</b></div>
+          <p>Оптимизируем подбор котельного оборудования строго по нормативам СП 41-108-2004, что гарантирует сохранение 1-й категории заявителей. Сокращаем регламентный срок выдачи ТУ до 30 календарных дней и сохраняем фиксированный минимальный тариф.</p>
+        </div>
+        <div class="eg-mini-inset eg-mini-inset--blue">
+          <div class="eg-mini-inset__head"><span class="eg-num-bubble">3</span><b>Юридическое оформление прав врезки (ФАС и Сервитуты)</b></div>
+          <p>В соответствии с изменениями законодательства о социальной газификации, необоснованное препятствование подключению признается нарушением антимонопольного законодательства (ФАС РФ). Заключаем соглашения о компенсациях по прозрачной методике без завышенных запросов.</p>
+        </div>
+
+        <div class="eg-inset-box eg-inset-box--green">
+          <span class="eg-inset-box__title">Официальное сопровождение ведущим инженером:</span>
+          <div class="eg-inset-box__row">
+            <p>Выдача договора техприсоединения в установленные законом 30 дней</p>
+            <span class="eg-pill eg-pill--success">По ПП РФ № 1547</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="eg-scope">
+<section class="eg-section" id="eg-faq">
+  <div class="eg-container">
+    <h2 class="eg-section__title">Часто задаваемые вопросы</h2>
+
+    <div class="eg-accordion">
+      <div class="eg-accordion__item">
+        <button class="eg-accordion__head">Сколько времени занимает проектирование?<span class="eg-accordion__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M12 5v14" /></svg></span></button>
+        <div class="eg-accordion__body"><p>В среднем разработка проекта газификации частного дома занимает от 10 до 20 рабочих дней в зависимости от сложности объекта и загруженности газораспределительной организации на этапе согласования.</p></div>
+      </div>
+      <div class="eg-accordion__item">
+        <button class="eg-accordion__head">Какие документы нужны для начала работ?<span class="eg-accordion__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M12 5v14" /></svg></span></button>
+        <div class="eg-accordion__body"><p>Понадобятся правоустанавливающие документы на дом и участок, технический паспорт или план БТИ, а также договор о технологическом присоединении (при наличии). Полный список мы уточняем индивидуально после осмотра объекта.</p></div>
+      </div>
+      <div class="eg-accordion__item">
+        <button class="eg-accordion__head">Сколько стоит проект газификации дома?<span class="eg-accordion__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M12 5v14" /></svg></span></button>
+        <div class="eg-accordion__body"><p>Стоимость проекта для дома начинается от 18 000 ₽, а полный комплекс работ «под ключ» — от 190 000 ₽. Итоговая цена зависит от площади дома, удалённости точки подключения и сложности схемы газоснабжения.</p></div>
+      </div>
+      <div class="eg-accordion__item">
+        <button class="eg-accordion__head">Вы помогаете с согласованием в газовой службе?<span class="eg-accordion__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="M12 5v14" /></svg></span></button>
+        <div class="eg-accordion__body"><p>Да, мы полностью сопровождаем процесс согласования: готовим и проверяем документацию, подаём её в Мособлгаз, отслеживаем статус и устраняем замечания без вашего участия — от заявки до получения готового пакета.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<div class="eg-scope">
+<section class="eg-cta" id="eg-contacts">
+  <div class="eg-cta__bg">
+    <img src="img/cta.webp" alt="Загородный дом вечером">
+  </div>
+  <div class="eg-container eg-cta__inner">
+    <h2>Оставьте заявку — подготовим проект<br>и сориентируем по стоимости</h2>
+    <p>Бесплатная консультация инженера и индивидуальный расчёт сметы</p>
+    <form method="post" action="" data-eg-form="cta" class="eg-lead-form eg-lead-form--inline">
+      <div class="eg-lead-form__row eg-lead-form__row--4">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="tel" class="eg-phone-mask" name="phone" placeholder="+7 (___) ___-__-__" required>
+        <input type="email" name="email" placeholder="E-mail">
+        <button type="submit" class="eg-btn eg-btn--orange">Оставить заявку</button>
+      </div>
+      <div class="eg-checkbox-row">
+        <label class="eg-checkbox-line eg-checkbox-line--light"><input type="checkbox" name="agree_personal_data" value="Y" required><span>Согласен(а) на обработку персональных данных</span></label>
+        <label class="eg-checkbox-line eg-checkbox-line--light"><input type="checkbox" name="agree_policy" value="Y" required><span>Ознакомлен(а) с политикой конфиденциальности</span></label>
+      </div>
+    </form>
+  </div>
+</section>
+</div>
+
+<div class="eg-scope">
+<footer class="eg-footer">
+  <div class="eg-container eg-footer__inner">
+    <div class="eg-footer__col eg-footer__col--brand">
+      <a href="#" class="eg-logo eg-logo--light">
+        <span class="eg-logo__icon"><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></span>
+        <span class="eg-logo__text">
+          <span class="eg-logo__title">НИП Энергогаз</span>
+          <span class="eg-logo__sub">Газификация под ключ</span>
+        </span>
+      </a>
+      <p class="eg-footer__copy">© 2026 ООО «НИП Энергогаз»<br>Все права защищены</p>
+    </div>
+    <div class="eg-footer__col">
+      <a href="#eg-services">Услуги</a>
+      <a href="#eg-prices">Цены</a>
+      <a href="#eg-works">Наши работы</a>
+      <a href="#eg-about">О компании</a>
+    </div>
+    <div class="eg-footer__col">
+      <a href="#eg-audit">Информация</a>
+      <a href="#">Статьи</a>
+      <a href="#eg-faq">Вопросы и ответы</a>
+      <a href="#">Политика конфиденциальности</a>
+    </div>
+    <div class="eg-footer__col eg-footer__col--contacts">
+      <span><svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" /><circle cx="12" cy="10" r="3" /></svg> г. Москва, ул. Примерная, д. 10, оф</span>
+      <span><svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg> +7 (495) 123-45-67</span>
+      <span><svg class="eg-icon eg-icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg> info@mosgazproekt.ru</span>
+    </div>
+  </div>
+</footer>
+</div>
+
+<div class="eg-scope">
+<div class="eg-modal" id="eg-modal">
+  <div class="eg-modal__overlay" data-eg-close-modal></div>
+  <div class="eg-modal__card">
+    <button class="eg-modal__close" data-eg-close-modal><svg class="eg-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg></button>
+    <h3>Заказать звонок</h3>
+    <p>Оставьте номер, и наш специалист свяжется с вами в течение 15 минут</p>
+    <form method="post" action="" data-eg-form="callback" class="eg-lead-form">
+      <input type="text" name="name" placeholder="Ваше имя" required>
+      <input type="tel" class="eg-phone-mask" name="phone" placeholder="+7 (___) ___-__-__" required>
+      <button type="submit" class="eg-btn eg-btn--orange eg-btn--block">Жду звонка</button>
+    </form>
+  </div>
+</div>
+</div>
+
+<script src="common/eg-base.js"></script>
+<script src="blocks/header/script.js"></script>
+<script src="blocks/calculator/script.js"></script>
+<script src="blocks/faq/script.js"></script>
+<script src="blocks/modal/script.js"></script>
+<script>
+  document.addEventListener('submit', function (e) {
+    var form = e.target.closest('[data-eg-form]');
+    if (!form) return;
+    e.preventDefault();
+    var btn = form.querySelector('[type="submit"]');
+    var text = btn.textContent;
+    btn.textContent = 'Заявка отправлена ✓';
+    btn.disabled = true;
+    setTimeout(function () {
+      btn.textContent = text;
+      btn.disabled = false;
+      form.reset();
+    }, 2000);
+  });
+</script>
+</body>
+</html>

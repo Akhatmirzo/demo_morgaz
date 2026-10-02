@@ -1,0 +1,43 @@
+.eg-scope .eg-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.eg-scope .eg-modal.eg-is-open {
+  display: flex;
+}
+.eg-scope .eg-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 33, 56, 0.55);
+}
+.eg-scope .eg-modal__card {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 420px;
+  width: 100%;
+}
+.eg-scope .eg-modal__card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.eg-scope .eg-modal__card > p {
+  color: var(--eg-text-muted);
+  font-size: 14.5px;
+}
+.eg-scope .eg-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--eg-text-muted);
+  padding: 6px;
+}

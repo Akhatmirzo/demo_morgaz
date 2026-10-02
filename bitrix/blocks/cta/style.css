@@ -1,0 +1,64 @@
+.eg-scope .eg-checkbox-line--light {
+  color: #cfe1f5;
+}
+.eg-scope .eg-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 0;
+}
+.eg-scope .eg-cta__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: end;
+}
+.eg-scope .eg-cta__bg img {
+  width: 55%;
+  height: 100%;
+  object-fit: cover;
+}
+.eg-scope .eg-cta__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(16, 65, 109, 1) 0%,
+    rgba(16, 65, 109, 1) 35%,
+    rgba(16, 65, 109, 1) 55%,
+    rgba(16, 65, 109, 0.65) 70%,
+    rgba(16, 65, 109, 0.1) 100%
+  );
+}
+.eg-scope .eg-cta__inner {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+.eg-scope .eg-cta__inner h2 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 800;
+}
+.eg-scope .eg-cta__inner > p {
+  color: #d7e6f5;
+  font-size: 16px;
+  margin-top: 14px;
+}
+.eg-scope .eg-cta .eg-lead-form {
+  margin-top: 26px;
+}
+.eg-scope .eg-cta .eg-lead-form input {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+}
+.eg-scope .eg-lead-form__row--4 {
+  align-items: stretch;
+}
+@media (max-width: 640px) {
+  .eg-scope .eg-cta__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

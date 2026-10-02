@@ -1,0 +1,8 @@
+.eg-scope .eg-split--reverse {
+  grid-template-columns: 1fr 0.7fr;
+}
+@media (max-width: 960px) {
+  .eg-scope .eg-split--reverse {
+    grid-template-columns: 1fr;
+  }
+}
